@@ -5,12 +5,16 @@
   "dependencies": {
     "highlightjs": "^9.12.0",
     "history": "^4.7.2",
+    "lodash-es": "^4.17.11",
     "polished": "^2.3.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
+    "react-markdown": "^4.0.3",
     "react-router-dom": "^4.3.1",
+    "react-router-prop-types": "^1.0.4",
     "react-scripts": "2.1.1",
+    "react-split": "^2.0.2",
     "styled-components": "^4.0.3",
     "styled-normalize": "^8.0.3"
   },
@@ -34,11 +38,13 @@
       "browser": true
     },
     "rules": {
+      "no-shadow": "off",
       "arrow-parens": "off",
       "operator-linebreak": "off",
       "object-curly-newline": "off",
       "implicit-arrow-linebreak": "off",
       "import/prefer-default-export": "off",
+      "react/forbid-prop-types": "off",
       "react/jsx-filename-extension": "off"
     }
   },

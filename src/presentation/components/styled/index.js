@@ -15,3 +15,5 @@ export {
 } from './Sidebar';
 
 export { default as Slide } from './Slide';
+export { default as CodeSandbox } from './CodeSandbox';
+export { default as Markdown } from './Markdown';

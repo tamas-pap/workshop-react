@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { SLIDES_BY_GROUPS } from '../constants';
 import {
   Sidebar as SidebarContainer,
   SidebarList,
@@ -9,18 +10,16 @@ import {
 
 const Sidebar = ({ isOpen, close }) => (
   <SidebarContainer isOpen={isOpen} onMouseLeave={close}>
-    <SidebarList>
-      <SidebarListTitle>Getting started with React</SidebarListTitle>
-      <SidebarListItem to="#">Introducing JSX</SidebarListItem>
-      <SidebarListItem to="#">Introducing JSX</SidebarListItem>
-      <SidebarListItem to="#">Introducing JSX</SidebarListItem>
-      <SidebarListItem to="#">Introducing JSX</SidebarListItem>
-      <SidebarListItem to="#">Introducing JSX</SidebarListItem>
-      <SidebarListItem to="#">Introducing JSX</SidebarListItem>
-      <SidebarListItem to="#">Introducing JSX</SidebarListItem>
-      <SidebarListItem to="#">Introducing JSX</SidebarListItem>
-      <SidebarListItem to="#">Introducing JSX</SidebarListItem>
-    </SidebarList>
+    {SLIDES_BY_GROUPS.map(({ title, slides }) => (
+      <SidebarList key={title}>
+        <SidebarListTitle>{title}</SidebarListTitle>
+        {slides.map(({ id, title }) => (
+          <SidebarListItem key={id} to={`/${id}`}>
+            {title}
+          </SidebarListItem>
+        ))}
+      </SidebarList>
+    ))}
   </SidebarContainer>
 );
 
