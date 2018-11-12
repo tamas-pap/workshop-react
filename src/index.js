@@ -1,11 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import * as serviceWorker from './serviceWorker';
+import React, { Fragment } from 'react';
+import { render } from 'react-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import { theme } from './core/styles';
+import { GlobalStyle } from './core/components/styled';
+import { Presentation } from './presentation/components';
 
-const App = () => <h1>Hello World</h1>;
-ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+render(
+  <ThemeProvider theme={theme}>
+    <Fragment>
+      <GlobalStyle />
+      <Router>
+        <Switch>
+          <Route path="/" component={Presentation} />
+        </Switch>
+      </Router>
+    </Fragment>
+  </ThemeProvider>,
+  document.getElementById('root'),
+);
