@@ -12,26 +12,32 @@ const NavigationBar = ({ title, previous, next, openSidebar }) => (
   <NavigationBarContainer>
     <NavigationBarTitle onClick={openSidebar}>{title}</NavigationBarTitle>
     <NavigationBarLinks>
-      <NavigationBarLink to={previous}>
-        <NavigationBarLinkIcon icon="previous" />
-      </NavigationBarLink>
+      {!!previous && (
+        <NavigationBarLink to={previous}>
+          <NavigationBarLinkIcon icon="previous" />
+        </NavigationBarLink>
+      )}
 
-      <NavigationBarLink to={next}>
-        <NavigationBarLinkIcon icon="next" />
-      </NavigationBarLink>
+      {!!next && (
+        <NavigationBarLink to={next}>
+          <NavigationBarLinkIcon icon="next" />
+        </NavigationBarLink>
+      )}
     </NavigationBarLinks>
   </NavigationBarContainer>
 );
 
 NavigationBar.propTypes = {
   title: PropTypes.string,
-  previous: PropTypes.string.isRequired,
-  next: PropTypes.string.isRequired,
+  previous: PropTypes.string,
+  next: PropTypes.string,
   openSidebar: PropTypes.func.isRequired,
 };
 
 NavigationBar.defaultProps = {
   title: undefined,
+  previous: undefined,
+  next: undefined,
 };
 
 export default NavigationBar;

@@ -69,6 +69,36 @@ export const SLIDES_BY_GROUPS = [
         title: "Let's code - Lifecycle methods",
         codeSandboxId: '30v7jn68p1',
       },
+      {
+        id: 'handling-events',
+        title: 'Handling events',
+        codeSandboxId: 'k59vxnyy2o',
+      },
+      {
+        id: 'handling-events-lets-code',
+        title: "Let's code - Handling events",
+        codeSandboxId: '0ql2pwommv',
+      },
+      {
+        id: 'lists-and-keys',
+        title: 'Lists and keys',
+        codeSandboxId: 'jkvkr7o6w',
+      },
+      {
+        id: 'lists-and-keys-lets-code',
+        title: "Let's code - Lists and keys",
+        codeSandboxId: '53po39wvqp',
+      },
+      {
+        id: 'working-with-forms',
+        title: 'Working with forms',
+        codeSandboxId: 'z6xr9qjk83',
+      },
+      {
+        id: 'working-with-forms-lets-code',
+        title: "Let's code - Working with forms",
+        codeSandboxId: 'lp1n5z9lrz',
+      },
     ],
   },
 ];

@@ -1,6 +1,6 @@
 import React, { PureComponent, Fragment } from 'react';
 import ReactRouterPropTypes from 'react-router-prop-types';
-import { find } from 'lodash-es';
+import { findIndex } from 'lodash-es';
 import { SplitColumn } from '../../core/components/styled';
 import { Split, DocumentTitle } from '../../core/components';
 import { SLIDES } from '../constants';
@@ -15,28 +15,34 @@ class Presentation extends PureComponent {
   state = {
     isSidebarOpen: false,
     slide: undefined,
+    nextSlide: undefined,
+    previousSlide: undefined,
   };
 
   componentDidMount() {
     const { match: { params: { slideId } } } = this.props;
-    const slide = find(SLIDES, { id: slideId });
+    const slideIndex = findIndex(SLIDES, { id: slideId });
 
-    if (!slide) {
+    if (slideIndex === -1) {
       history.push(`/${SLIDES[0].id}`);
       return;
     }
 
-    this.setState({ slide });
+    const slide = SLIDES[slideIndex];
+    const nextSlide = slideIndex < SLIDES.length ? SLIDES[slideIndex + 1] : undefined;
+    const previousSlide = slideIndex > 0 ? SLIDES[slideIndex - 1] : undefined;
+
+    this.setState({ slide, nextSlide, previousSlide });
   }
 
   componentWillReceiveProps({ match: { params: { slideId } } }) {
-    this.openSlide(slideId);
-  }
+    const slideIndex = findIndex(SLIDES, { id: slideId });
+    const slide = SLIDES[slideIndex];
+    const nextSlide = slideIndex < SLIDES.length ? SLIDES[slideIndex + 1] : undefined;
+    const previousSlide = slideIndex > 0 ? SLIDES[slideIndex - 1] : undefined;
 
-  openSlide = slideId => {
-    const slide = find(SLIDES, { id: slideId });
-    this.setState({ slide });
-  };
+    this.setState({ slide, nextSlide, previousSlide });
+  }
 
   openSidebar = () => {
     this.setState({ isSidebarOpen: true });
@@ -47,7 +53,7 @@ class Presentation extends PureComponent {
   };
 
   render() {
-    const { isSidebarOpen, slide: { id, title, codeSandboxId } = {} } = this.state;
+    const { isSidebarOpen, slide: { id, title, codeSandboxId } = {}, previousSlide, nextSlide } = this.state;
 
     return (
       <Fragment>
@@ -62,7 +68,12 @@ class Presentation extends PureComponent {
             </Split>
           </Slide>
 
-          <NavigationBar title={title} previous="/composition" next="/inheritance" openSidebar={this.openSidebar} />
+          <NavigationBar
+            title={title}
+            previous={previousSlide && previousSlide.id}
+            next={nextSlide && nextSlide.id}
+            openSidebar={this.openSidebar}
+          />
         </PresentationContainer>
       </Fragment>
     );
