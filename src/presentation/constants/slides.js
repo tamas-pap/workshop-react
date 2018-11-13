@@ -5,19 +5,69 @@ export const SLIDES_BY_GROUPS = [
     title: 'Getting started with React',
     slides: [
       {
-        id: 'introducing-jsx-1',
-        title: 'Introducing JSX 1',
-        codeSandboxId: '4wq4m4o85w',
+        id: 'introducing-jsx',
+        title: 'Introducing JSX',
+        codeSandboxId: '2v9xn8j3jp',
       },
       {
-        id: 'introducing-jsx-2',
-        title: 'Introducing JSX 2',
-        codeSandboxId: '4nzykly49',
+        id: 'embedding-expressions-in-jsx',
+        title: 'Embedding expressions in JSX',
+        codeSandboxId: 'mq3nnowpzj',
       },
       {
-        id: 'introducing-jsx-3',
-        title: 'Introducing JSX 3',
-        codeSandboxId: 'w7wq32jk9w',
+        id: 'specifying-attributes-in-jsx',
+        title: 'Specifying attributes in JSX',
+        codeSandboxId: '38knyyoljq',
+      },
+      {
+        id: 'jsx-represents-objects',
+        title: 'JSX represents objects',
+        codeSandboxId: '58v8q72xk',
+      },
+      {
+        id: 'components-and-props',
+        title: 'Components and Props',
+        codeSandboxId: 'j21388ko5w',
+      },
+      {
+        id: 'components-and-pros-lets-code',
+        title: "Let's code - Components and Props",
+        codeSandboxId: '4jk6wzmlk9',
+      },
+      {
+        id: 'composition-vs-inheritance',
+        title: 'Composition vs. inheritance',
+        codeSandboxId: '5x945pqr7k',
+      },
+      {
+        id: 'composition-in-react',
+        title: 'Composition in React',
+        codeSandboxId: 'l4r3k1r3vz',
+      },
+      {
+        id: 'composition-in-react-lets-code',
+        title: "Let's code - Composition in React",
+        codeSandboxId: 'vj0knkqqz0',
+      },
+      {
+        id: 'props-are-read-only',
+        title: 'Props are Read-Only',
+        codeSandboxId: '2orql6zokj',
+      },
+      {
+        id: 'working-with-state',
+        title: 'Working with state',
+        codeSandboxId: 'lr7mzozq0q',
+      },
+      {
+        id: 'working-with-state-lets-code',
+        title: "Let's code - Working with state",
+        codeSandboxId: '8xykyy9mk0',
+      },
+      {
+        id: 'lifecycle-methods-lets-code',
+        title: "Let's code - Lifecycle methods",
+        codeSandboxId: '30v7jn68p1',
       },
     ],
   },
