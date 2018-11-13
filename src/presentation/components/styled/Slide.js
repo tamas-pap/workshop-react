@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Slide = styled.div`
-  flex: 1;
+  height: calc(100vh - 28px);
 `;
 
 export default Slide;

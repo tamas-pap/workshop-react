@@ -24,9 +24,7 @@ class Markdown extends PureComponent {
 
   render() {
     const { markdown } = this.state;
-    return markdown ? (
-      <MarkdownContainer source={markdown} renderers={{ code: CodeBlock }} />
-    ) : null;
+    return markdown ? <MarkdownContainer source={markdown} renderers={{ code: CodeBlock }} /> : null;
   }
 }
 

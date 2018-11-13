@@ -1,12 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { SLIDES_BY_GROUPS } from '../constants';
-import {
-  Sidebar as SidebarContainer,
-  SidebarList,
-  SidebarListTitle,
-  SidebarListItem,
-} from './styled';
+import { Sidebar as SidebarContainer, SidebarList, SidebarListTitle, SidebarListItem } from './styled';
 
 const Sidebar = ({ isOpen, close }) => (
   <SidebarContainer isOpen={isOpen} onMouseLeave={close}>

@@ -10,12 +10,7 @@ const gutterStyle = (dimension, gutterSize) => ({
 });
 
 const Split = ({ sizes, minSize, children }) => (
-  <SplitContainer
-    sizes={sizes}
-    minSize={minSize}
-    gutterSize={8}
-    gutterStyle={gutterStyle}
-  >
+  <SplitContainer sizes={sizes} minSize={minSize} gutterSize={8} gutterStyle={gutterStyle}>
     {children}
   </SplitContainer>
 );

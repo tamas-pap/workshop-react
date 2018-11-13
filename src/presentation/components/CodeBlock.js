@@ -23,10 +23,7 @@ class CodeBlock extends React.PureComponent {
     const { language, value } = this.props;
     return (
       <pre>
-        <code
-          ref={this.setCodeRef}
-          className={language && `language-${language}`}
-        >
+        <code ref={this.setCodeRef} className={language && `language-${language}`}>
           {value}
         </code>
       </pre>

@@ -1,11 +1,12 @@
 import styled, { css } from 'styled-components';
-import { transparentize } from 'polished';
+import { transparentize, darken } from 'polished';
 import { Link } from 'react-router-dom';
 
 export const SidebarListTitle = styled.span`
   display: block;
   margin: 0 0 10px 15px;
   font-weight: ${props => props.theme.fontWeightMedium};
+  color: #61dafb;
 `;
 
 export const SidebarListItem = styled(Link)`
@@ -14,7 +15,11 @@ export const SidebarListItem = styled(Link)`
   font-size: 13px;
 
   &:hover {
-    background-color: ${props => props.theme.grayLight};
+    color: #fff;
+  }
+
+  &.active {
+    color: #61dafb;
   }
 `;
 
@@ -31,8 +36,9 @@ export const Sidebar = styled.div`
   height: 100vh;
   padding: 20px 0;
   overflow-y: auto;
-  background-color: #fff;
+  background-color: ${props => darken(0.07, props.theme.grayBase)};
   box-shadow: 0 4px 16px ${transparentize(0.9, '#000')};
+  color: ${transparentize(0.2, '#fff')};
   transform: translateX(-260px);
   transition: transform 0.3s ease-out;
 

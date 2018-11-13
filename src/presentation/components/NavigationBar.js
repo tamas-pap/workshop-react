@@ -24,10 +24,14 @@ const NavigationBar = ({ title, previous, next, openSidebar }) => (
 );
 
 NavigationBar.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   previous: PropTypes.string.isRequired,
   next: PropTypes.string.isRequired,
   openSidebar: PropTypes.func.isRequired,
+};
+
+NavigationBar.defaultProps = {
+  title: undefined,
 };
 
 export default NavigationBar;

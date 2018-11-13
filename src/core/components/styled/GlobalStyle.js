@@ -25,37 +25,35 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${transparentize(0.8, theme.brandPrimary)};
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 0 0 10px;
-  }
 
   h1 {
-    font-size: 32px;
+    font-size: 28px;
+    margin: 0 0 20px;
   }
 
   h2 {
-    font-size: 30px;
+    font-size: 24px;
+    margin: 0 0 15px;
   }
 
   h3 {
-    font-size: 24px;
+    font-size: 22px;
+    margin: 0 0 10px;
   }
 
   h4 {
     font-size: 18px;
+    margin: 0 0 10px;
   }
 
   h5 {
     font-size: 14px;
+    margin: 0 0 10px;
   }
 
   h6 {
     font-size: 12px;
+    margin: 0 0 10px;
   }
 
   a {

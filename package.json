@@ -38,6 +38,7 @@
       "browser": true
     },
     "rules": {
+      "max-len": "off",
       "no-shadow": "off",
       "arrow-parens": "off",
       "operator-linebreak": "off",
@@ -49,7 +50,7 @@
     }
   },
   "prettier": {
-    "printWidth": 80,
+    "printWidth": 120,
     "tabWidth": 2,
     "semi": true,
     "singleQuote": true,

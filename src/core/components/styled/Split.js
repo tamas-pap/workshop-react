@@ -5,6 +5,6 @@ export const SplitColumn = styled.div``;
 
 export const Split = styled(ReactSplit)`
   display: flex;
-  with: 100%;
+  width: 100%;
   height: 100%;
 `;

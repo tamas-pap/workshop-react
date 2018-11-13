@@ -1,8 +1,8 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import ReactRouterPropTypes from 'react-router-prop-types';
 import { find } from 'lodash-es';
 import { SplitColumn } from '../../core/components/styled';
-import { Split } from '../../core/components';
+import { Split, DocumentTitle } from '../../core/components';
 import { SLIDES } from '../constants';
 import { Presentation as PresentationContainer, Slide } from './styled';
 import history from '../../core/services/history';
@@ -14,9 +14,7 @@ import Sidebar from './Sidebar';
 class Presentation extends PureComponent {
   state = {
     isSidebarOpen: false,
-    slideTitle: undefined,
-    codeSandboxId: undefined,
-    markdownFileName: undefined,
+    slide: undefined,
   };
 
   componentDidMount() {
@@ -28,11 +26,7 @@ class Presentation extends PureComponent {
       return;
     }
 
-    this.setState({
-      slideTitle: slide.title,
-      codeSandboxId: slide.codeSandboxId,
-      markdownFileName: `${slide.id}.md`,
-    });
+    this.setState({ slide });
   }
 
   componentWillReceiveProps({ match: { params: { slideId } } }) {
@@ -41,11 +35,7 @@ class Presentation extends PureComponent {
 
   openSlide = slideId => {
     const slide = find(SLIDES, { id: slideId });
-    this.setState({
-      slideTitle: slide.title,
-      codeSandboxId: slide.codeSandboxId,
-      markdownFileName: `${slide.id}.md`,
-    });
+    this.setState({ slide });
   };
 
   openSidebar = () => {
@@ -57,36 +47,24 @@ class Presentation extends PureComponent {
   };
 
   render() {
-    const {
-      isSidebarOpen,
-      slideTitle,
-      codeSandboxId,
-      markdownFileName,
-    } = this.state;
+    const { isSidebarOpen, slide: { id, title, codeSandboxId } = {} } = this.state;
 
     return (
-      <PresentationContainer>
-        <Sidebar isOpen={isSidebarOpen} close={this.closeSidebar} />
+      <Fragment>
+        <DocumentTitle>{title}</DocumentTitle>
+        <PresentationContainer>
+          <Sidebar isOpen={isSidebarOpen} close={this.closeSidebar} />
 
-        <Slide>
-          <Split sizes={[65, 35]} minSize={0}>
-            <SplitColumn>
-              {!!codeSandboxId && <CodeSandbox id={codeSandboxId} />}
-            </SplitColumn>
+          <Slide>
+            <Split sizes={[65, 35]} minSize={0}>
+              <SplitColumn>{!!codeSandboxId && <CodeSandbox id={codeSandboxId} />}</SplitColumn>
+              <SplitColumn>{!!id && <Markdown fileName={`${id}.md`} />}</SplitColumn>
+            </Split>
+          </Slide>
 
-            <SplitColumn>
-              {!!markdownFileName && <Markdown fileName={markdownFileName} />}
-            </SplitColumn>
-          </Split>
-        </Slide>
-
-        <NavigationBar
-          title={slideTitle}
-          previous="/composition"
-          next="/inheritance"
-          openSidebar={this.openSidebar}
-        />
-      </PresentationContainer>
+          <NavigationBar title={title} previous="/composition" next="/inheritance" openSidebar={this.openSidebar} />
+        </PresentationContainer>
+      </Fragment>
     );
   }
 }
