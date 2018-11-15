@@ -7,6 +7,11 @@ const Markdown = styled(ReactMarkdown)`
   overflow: auto;
   line-height: 1.5;
 
+  ul,
+  ol {
+    margin: 0 0 20px 18px;
+  }
+
   p {
     line-height: 1.6;
   }

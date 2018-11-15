@@ -114,6 +114,11 @@ export const SLIDES_BY_GROUPS = [
         title: 'Using create-react-app',
         codeSandboxId: 'q7n52xzj',
       },
+      {
+        id: 'setup-your-code-editor',
+        title: 'Setup your code editor',
+        codeSandboxId: '4zx3zwv2n4',
+      },
     ],
   },
 ];
