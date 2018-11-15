@@ -101,6 +101,21 @@ export const SLIDES_BY_GROUPS = [
       },
     ],
   },
+  {
+    title: 'Create a development environment',
+    slides: [
+      {
+        id: 'setup-webpack-and-babel',
+        title: 'Setup Webpack and Babel',
+        codeSandboxId: 'pwlqzlxqz0',
+      },
+      {
+        id: 'using-create-react-app',
+        title: 'Using create-react-app',
+        codeSandboxId: 'q7n52xzj',
+      },
+    ],
+  },
 ];
 
 export const SLIDES = flatten(map(SLIDES_BY_GROUPS, 'slides'));
