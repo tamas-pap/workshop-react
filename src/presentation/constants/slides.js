@@ -102,6 +102,81 @@ export const SLIDES_BY_GROUPS = [
     ],
   },
   {
+    title: 'Introduction to React Hooks',
+    slides: [
+      {
+        id: 'using-the-state-hook',
+        title: 'Using the State Hook',
+        codeSandboxId: 'l75p22o409',
+      },
+      {
+        id: 'using-the-effect-hook',
+        title: 'Using the Effect Hook',
+        codeSandboxId: '30ywk42165',
+      },
+      {
+        id: 'using-effects-with-cleanup',
+        title: 'Using effects with cleanup',
+        codeSandboxId: '14ror86q04',
+      },
+      {
+        id: 'using-the-reducer-hook',
+        title: 'Using the Reducer Hook',
+        codeSandboxId: '8l10ljn878',
+      },
+      {
+        id: 'rules-of-hooks',
+        title: 'Rules of Hooks',
+        codeSandboxId: 'oj55p8k409',
+      },
+      {
+        id: 'using-hooks-lets-code',
+        title: "Let's code - Using Hooks",
+        codeSandboxId: '8l16402jo8',
+      },
+    ],
+  },
+  {
+    title: 'Introduction to Redux',
+    slides: [
+      {
+        id: 'introduction-to-redux',
+        title: 'Introduction to Redux',
+        codeSandboxId: 'z6nkrjppxx',
+      },
+      {
+        id: 'core-redux-concepts',
+        title: 'Core Redux concepts',
+        codeSandboxId: '5y3nq65x9k',
+      },
+      {
+        id: 'the-three-principles-of-redux',
+        title: 'The three principles of Redux',
+        codeSandboxId: 'mm1q4p4mpp',
+      },
+      {
+        id: 'using-redux-lets-code',
+        title: "Let's code - Using Redux",
+        codeSandboxId: 'yk3vyxyp59',
+      },
+      {
+        id: 'using-redux-with-react',
+        title: 'Using Redux with React',
+        codeSandboxId: 'k3ylj1m497',
+      },
+      {
+        id: 'using-redux-with-react-lets-code',
+        title: "Let's code - Using Redux with React",
+        codeSandboxId: '613370qp2w',
+      },
+      {
+        id: 'redux-middlewares',
+        title: 'Redux middlewares',
+        codeSandboxId: 'm33krqxqky',
+      },
+    ],
+  },
+  {
     title: 'Introduction to Formik',
     slides: [
       {
@@ -138,41 +213,6 @@ export const SLIDES_BY_GROUPS = [
         id: 'using-the-form-component',
         title: 'Using the Form component',
         codeSandboxId: '437nom5wk7',
-      },
-    ],
-  },
-  {
-    title: 'Introduction to React Hooks',
-    slides: [
-      {
-        id: 'using-the-state-hook',
-        title: 'Using the State Hook',
-        codeSandboxId: 'l75p22o409',
-      },
-      {
-        id: 'using-the-effect-hook',
-        title: 'Using the Effect Hook',
-        codeSandboxId: '30ywk42165',
-      },
-      {
-        id: 'using-effects-with-cleanup',
-        title: 'Using effects with cleanup',
-        codeSandboxId: '14ror86q04',
-      },
-      {
-        id: 'using-the-reducer-hook',
-        title: 'Using the Reducer Hook',
-        codeSandboxId: '8l10ljn878',
-      },
-      {
-        id: 'rules-of-hooks',
-        title: 'Rules of Hooks',
-        codeSandboxId: 'oj55p8k409',
-      },
-      {
-        id: 'using-hooks-lets-code',
-        title: "Let's code - Using Hooks",
-        codeSandboxId: '8l16402jo8',
       },
     ],
   },

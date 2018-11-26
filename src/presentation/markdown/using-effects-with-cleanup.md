@@ -72,4 +72,5 @@ function FriendStatus(props) {
 }
 ```
 
-*Why did we return a function from our effect?* This is the optional cleanup mechanism for effects. Every effect may return a function that cleans up after it. This lets us keep the logic for adding and removing subscriptions close to each other. They’re part of the same effect!
+**Why did we return a function from our effect?**
+This is the optional cleanup mechanism for effects. Every effect may return a function that cleans up after it. This lets us keep the logic for adding and removing subscriptions close to each other. They’re part of the same effect!
