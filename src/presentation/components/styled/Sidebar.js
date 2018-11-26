@@ -11,7 +11,8 @@ export const SidebarListTitle = styled.span`
 
 export const SidebarListItem = styled(NavLink)`
   display: block;
-  padding: 6px 25px;
+  padding: 3px 25px;
+  line-height: 20px;
   font-size: 13px;
 
   &:hover {

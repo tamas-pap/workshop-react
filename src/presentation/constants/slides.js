@@ -102,6 +102,46 @@ export const SLIDES_BY_GROUPS = [
     ],
   },
   {
+    title: 'Introduction to Formik',
+    slides: [
+      {
+        id: 'create-a-simple-form-with-formik',
+        title: 'Create a simple form with Formik',
+        codeSandboxId: '7kvymoo0yj',
+      },
+      {
+        id: 'implement-validation-with-formik',
+        title: 'Implement validation with Formik',
+        codeSandboxId: 'q9jq469w3w',
+      },
+      {
+        id: 'using-a-validation-schema-with-formik',
+        title: 'Using a validation schema with Formik',
+        codeSandboxId: 'qxlkwlw7v6',
+      },
+      {
+        id: 'using-the-with-formik-hoc',
+        title: 'Using the withFormik HOC',
+        codeSandboxId: 'w6jpnrpjw5',
+      },
+      {
+        id: 'using-the-field-component',
+        title: 'Using the Field component',
+        codeSandboxId: '20157r167j',
+      },
+      {
+        id: 'implement-custom-field-components',
+        title: 'Implement custom Field components',
+        codeSandboxId: 'qx7vovv77q',
+      },
+      {
+        id: 'using-the-form-component',
+        title: 'Using the Form component',
+        codeSandboxId: '437nom5wk7',
+      },
+    ],
+  },
+  {
     title: 'Create a development environment',
     slides: [
       {
