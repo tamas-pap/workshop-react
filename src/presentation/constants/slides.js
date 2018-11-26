@@ -142,6 +142,41 @@ export const SLIDES_BY_GROUPS = [
     ],
   },
   {
+    title: 'Introduction to React Hooks',
+    slides: [
+      {
+        id: 'using-the-state-hook',
+        title: 'Using the State Hook',
+        codeSandboxId: 'l75p22o409',
+      },
+      {
+        id: 'using-the-effect-hook',
+        title: 'Using the Effect Hook',
+        codeSandboxId: '30ywk42165',
+      },
+      {
+        id: 'using-effects-with-cleanup',
+        title: 'Using effects with cleanup',
+        codeSandboxId: '14ror86q04',
+      },
+      {
+        id: 'using-the-reducer-hook',
+        title: 'Using the Reducer Hook',
+        codeSandboxId: '8l10ljn878',
+      },
+      {
+        id: 'rules-of-hooks',
+        title: 'Rules of Hooks',
+        codeSandboxId: 'oj55p8k409',
+      },
+      {
+        id: 'using-hooks-lets-code',
+        title: "Let's code - Using Hooks",
+        codeSandboxId: '8l16402jo8',
+      },
+    ],
+  },
+  {
     title: 'Create a development environment',
     slides: [
       {
