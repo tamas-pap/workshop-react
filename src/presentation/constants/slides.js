@@ -217,6 +217,31 @@ export const SLIDES_BY_GROUPS = [
     ],
   },
   {
+    title: 'Introduction to React router',
+    slides: [
+      {
+        id: 'basic-routing',
+        title: 'Basic routing',
+        codeSandboxId: 'mq10858vx8',
+      },
+      {
+        id: 'working-with-url-parameters',
+        title: 'Working with URL params',
+        codeSandboxId: '189k2vkjx3',
+      },
+      {
+        id: 'ambiguous-url-parameters',
+        title: 'Ambiguous URL parameters',
+        codeSandboxId: 'l6rkrop8l',
+      },
+      {
+        id: 'working-with-query-parameters',
+        title: 'Working with query parameters',
+        codeSandboxId: 'qv5v05vxjq',
+      },
+    ],
+  },
+  {
     title: 'Create a development environment',
     slides: [
       {
