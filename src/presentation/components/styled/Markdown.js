@@ -6,6 +6,7 @@ const Markdown = styled(ReactMarkdown)`
   padding: 10px 20px;
   overflow: auto;
   line-height: 1.5;
+  font-size: 16px;
 
   ul,
   ol {
